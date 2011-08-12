@@ -1,0 +1,13 @@
+_dive_ is a tiny module for node that is able to recursively walk ("dive") a
+directory tree. You may use it as follows:
+
+	var dive = require("dive");
+
+	dive(process.cwd(), function(err, file) {
+		if (err)
+			throw err;
+
+		console.log(file);
+	});
+
+This will list all files in your current working directory without an order.

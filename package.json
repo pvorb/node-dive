@@ -1,0 +1,10 @@
+{
+	"name": "dive",
+	"description": "diving into directory trees",
+	"author": "Paul Vorbach <paul@vorb.de>",
+	"version": "0.0.1",
+	"main": "./lib/dive.js",
+	"repository": "git://github.com/pvorb/dive.git",
+	"tags": [ "recursive", "file walking", "directories" ],
+	"bugs": "http://github.com/pvorb/dive/issues"
+}
