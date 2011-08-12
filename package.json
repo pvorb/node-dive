@@ -1,8 +1,9 @@
 {
 	"name": "dive",
-	"description": "diving into directory trees",
+	"description":
+		"walk through directory trees and apply an action to every file",
 	"author": "Paul Vorbach <paul@vorb.de>",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"main": "./lib/dive.js",
 	"repository": "git://github.com/pvorb/dive.git",
 	"tags": [ "recursive", "file walking", "directories" ],
