@@ -3,9 +3,15 @@
 	"description":
 		"walk through directory trees and apply an action to every file",
 	"author": "Paul Vorbach <paul@vorb.de>",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"main": "./lib/dive.js",
 	"repository": "git://github.com/pvorb/dive.git",
-	"tags": [ "recursive", "file walking", "directories" ],
-	"bugs": "http://github.com/pvorb/dive/issues"
+	"tags": [
+		"recursive",
+		"file walking",
+		"directories"
+	],
+	"bugs": {
+		"web": "http://github.com/pvorb/dive/issues"
+	}
 }
