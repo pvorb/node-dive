@@ -5,7 +5,7 @@
 	"author": "Paul Vorbach <paul@vorb.de>",
 	"version": "0.0.3",
 	"main": "./lib/dive.js",
-	"repository": "git://github.com/pvorb/dive.git",
+	"repository": "git://github.com/pvorb/node-dive.git",
 	"tags": [
 		"recursive",
 		"file walking",
