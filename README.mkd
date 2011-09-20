@@ -1,5 +1,5 @@
 **dive** is a tiny module for node that is able to recursively walk (_„dive“_) a
-directory tree.
+directory tree. **dive** is the asynchronous version of [diveSync](//github.com/pvorb/diveSync).
 
 ## Example
 
@@ -18,7 +18,7 @@ This will list all files in your current working directory without an order.
 You may also apply options to the function call.
 
 ```javascript
-dive(dir, opt, action);
+dive(dir[, opt], action);
 ```
 
 The default options are
@@ -27,7 +27,7 @@ The default options are
 {
   recursive: true,  // If set to false, this will ignore subdirectories.
   all: false        // If set to true, this will show "dot files" and
-                    // files in "dot directories", e.g. ".gitinore" or
+                    // files in "dot directories", e.g. ".gitignore" or
                     // ".git/HEAD".
 }
 ```

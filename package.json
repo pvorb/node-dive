@@ -1,7 +1,7 @@
 {
   "name": "dive",
   "description":
-    "walk through directory trees and apply an action to every file",
+    "walk through directory trees and apply an action on every file",
   "author": "Paul Vorbach <paul@vorb.de>",
   "version": "0.0.4",
   "main": "./lib/dive.js",
