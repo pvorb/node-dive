@@ -1,17 +1,21 @@
 {
-	"name": "dive",
-	"description":
-		"walk through directory trees and apply an action to every file",
-	"author": "Paul Vorbach <paul@vorb.de>",
-	"version": "0.0.3",
-	"main": "./lib/dive.js",
-	"repository": "git://github.com/pvorb/node-dive.git",
-	"tags": [
-		"recursive",
-		"file walking",
-		"directories"
-	],
-	"bugs": {
-		"web": "http://github.com/pvorb/dive/issues"
-	}
+  "name": "dive",
+  "description":
+    "walk through directory trees and apply an action to every file",
+  "author": "Paul Vorbach <paul@vorb.de>",
+  "version": "0.0.4",
+  "main": "./lib/dive.js",
+  "repository": "git://github.com/pvorb/node-dive.git",
+  "tags": [
+    "recursive",
+    "file walking",
+    "directories",
+    "async"
+  ],
+  "bugs": {
+    "web": "http://github.com/pvorb/node-dive/issues"
+  },
+  "engines": {
+    "node": ">=0.4.0"
+  }
 }
