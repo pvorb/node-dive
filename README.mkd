@@ -1,35 +1,55 @@
 **dive** is a tiny module for node that is able to recursively walk (_„dive“_) a
 directory tree. **dive** is the asynchronous version of [diveSync](//github.com/pvorb/node-diveSync).
 
-## Example
+```javascript
+dive(directory[, options], action[, complete]);
+```
+
+*   `directory` is the pathname of a readable directory.
+*   `options [optional]` is an object that defines some of the properties.
+
+    The default options are as follows:
+
+    ```javascript
+    {
+      recursive: true,    // - If set to false, this will ignore subdirectories.
+      all: false,         // - If set to true, this will show "dot files" and
+                          //   files in "dot directories", e.g. ".gitignore" or
+                          //  ".git/HEAD".
+      directories: false  // - If set to true, this will call `action` on
+                          //   directories, too.
+    }
+    ```
+*   `action` is passed two arguments `(err, file)` where `err` is an error or
+    `null` and `file` is the pathname of a file.
+*   `complete [optional]` may define a second callback, that is called, when all
+    files have been processed. It takes no arguments.
+
+## Usage
 
 ```javascript
-var dive = require("dive");
+var require('dive');
 
-dive(process.cwd(), function(err, file) {
+dive(process.cwd(), { all: true }, function(err, file) {
   if (err) throw err;
-
   console.log(file);
+}, function() {
+  console.log('complete');
 });
 ```
 
-This will list all files in your current working directory without an order.
+## Installation
 
-You may also apply options to the function call.
-
-```javascript
-dive(dir[, opt], action);
+```bash
+$ npm install -g dive
 ```
 
-The default options are
+## Bugs and Issues
 
-```javascript
-{
-  recursive: true,  // If set to false, this will ignore subdirectories.
-  all: false        // If set to true, this will show "dot files" and
-                    // files in "dot directories", e.g. ".gitignore" or
-                    // ".git/HEAD".
-}
-```
+If you encounter any bugs or issues, feel free to open an issue at
+[github](//github.com/pvorb/node-dive/issues).
 
-This argument is optional.
+## License
+
+This package is licensed under the
+[MIT license](http://vorb.de/license/mit.html).

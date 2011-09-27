@@ -3,8 +3,8 @@
   "description":
     "walk through directory trees and apply an action on every file",
   "author": "Paul Vorbach <paul@vorb.de>",
-  "version": "0.0.4",
-  "main": "./lib/dive.js",
+  "version": "0.1.0",
+  "main": "dive.js",
   "repository": "git://github.com/pvorb/node-dive.git",
   "tags": [
     "recursive",
@@ -17,5 +17,8 @@
   },
   "engines": {
     "node": ">=0.4.0"
+  },
+  "dependencies": {
+    "append": ">=0.1.0"
   }
 }
