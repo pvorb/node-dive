@@ -28,7 +28,7 @@ dive(directory[, options], action[, complete]);
 ## Usage
 
 ```javascript
-var require('dive');
+var dive = require('dive');
 
 dive(process.cwd(), { all: true }, function(err, file) {
   if (err) throw err;
