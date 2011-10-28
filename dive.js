@@ -31,6 +31,7 @@ module.exports = function(dir, opt, action, complete) {
   function dive(dir) {
     // Read the directory
     fs.readdir(dir, function(err, list) {
+      todo--;
       // Return the error if something went wrong
       if (err) return action(err);
 
@@ -68,7 +69,6 @@ module.exports = function(dir, opt, action, complete) {
         }
       });
     });
-    todo--;
   };
 
   var todo = 1;
