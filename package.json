@@ -3,7 +3,7 @@
   "description":
     "walk through directory trees and apply an action on every file",
   "author": "Paul Vorbach <paul@vorb.de> (http://vorb.de)",
-  "contributors": [ "wellcaffeinated" ],
+  "contributors": [ "Jasper Palfree (https://github.com/wellcaffeinated)" ],
   "version": "0.1.1",
   "main": "dive.js",
   "repository": "git://github.com/pvorb/node-dive.git",
@@ -14,7 +14,7 @@
     "async"
   ],
   "bugs": {
-    "web": "http://github.com/pvorb/node-dive/issues"
+    "url": "http://github.com/pvorb/node-dive/issues"
   },
   "engines": {
     "node": ">=0.4.0"
