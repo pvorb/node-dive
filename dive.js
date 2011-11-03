@@ -68,6 +68,10 @@ module.exports = function(dir, opt, action, complete) {
           });
         }
       });
+      //empty directories
+      if(!list.length && !todo){
+	complete();
+      }
     });
   };
 
