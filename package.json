@@ -4,7 +4,7 @@
     "walk through directory trees and apply an action on every file",
   "author": "Paul Vorbach <paul@vorb.de> (http://vorb.de)",
   "contributors": [ "Jasper Palfree (https://github.com/wellcaffeinated)" ],
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "dive.js",
   "repository": "git://github.com/pvorb/node-dive.git",
   "tags": [
