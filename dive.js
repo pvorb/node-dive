@@ -1,32 +1,33 @@
 var fs = require('fs'),
     append = require('append');
 
-// General function
+// default options
+var defaultOpt = {
+  all: false,
+  recursive: true,
+  directories: false
+};
+
+// general function
 module.exports = function(dir, opt, action, complete) {
 
-  // Check args
+  // check args
   if (typeof opt == 'function') {
     if (typeof action == 'undefined')
-      complete = function() {};
+      complete = function () {};
     else
       complete = action;
 
     action = opt;
     opt = { };
   } else if (typeof complete == 'undefined')
-    complete = function() {};
+    complete = function () {};
 
   // Assert that dir is a string
   if (typeof dir != 'string')
     dir = process.cwd();
 
-  // Default options
-  var defaultOptions = {
-    all: false,
-    recursive: true,
-    directories: false
-  };
-  opt = append(defaultOptions, opt);
+  opt = append(defaultOpt, opt);
 
   function dive(dir) {
     // Read the directory
