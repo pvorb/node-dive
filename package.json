@@ -20,6 +20,6 @@
     "node": ">=0.4.0"
   },
   "dependencies": {
-    "append": ">=0.1.0"
+    "append": ">=0.1.1"
   }
 }
