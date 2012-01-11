@@ -46,7 +46,10 @@ module.exports = function(dir, opt, action, complete) {
           var path = dir + '/' + file;
           // Get the file's stats
           fs.stat(path, function(err, stat) {
-            if (err) return action(err);
+            if (err) {
+              todo--;
+              return action(err);
+            }
 
             // If the file is a directory
             if (stat) {
