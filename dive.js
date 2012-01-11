@@ -1,5 +1,6 @@
-var fs = require('fs'),
-    append = require('append');
+var fs = require('fs');
+var path = require('path');
+var append = require('append');
 
 // default options
 var defaultOpt = {
@@ -43,9 +44,9 @@ module.exports = function(dir, opt, action, complete) {
           todo++;
 
           // Full path of that file
-          var path = dir + '/' + file;
+          var fullPath = path.resolve(dir, file);
           // Get the file's stats
-          fs.stat(path, function(err, stat) {
+          fs.stat(fullPath, function(err, stat) {
             if (err) {
               todo--;
               return action(err);
@@ -56,14 +57,14 @@ module.exports = function(dir, opt, action, complete) {
               if (stat.isDirectory()) {
                 // Call action if enabled for directories
                 if (opt.directories)
-                  action(null, path);
+                  action(null, fullPath);
 
                 // Dive into the directory
                 if (opt.recursive)
-                  dive(path);
+                  dive(fullPath);
               } else {
                 // Call the action
-                action(null, path);
+                action(null, fullPath);
 
                 if (!--todo)
                   complete();
