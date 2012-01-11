@@ -1,9 +1,10 @@
 {
   "name": "dive",
-  "description": "walk through directory trees and apply an action on every file",
+  "description": "walk through directory trees and apply an action to every file",
   "author": "Paul Vorbach <paul@vorb.de> (http://vorb.de)",
   "contributors": [
-    "Jasper Palfree (https://github.com/wellcaffeinated)"
+    "Jasper Palfree (https://github.com/wellcaffeinated)",
+    "Jan Mühlemann (https://github.com/jamuhl)"
   ],
   "version": "0.1.3",
   "main": "dive.js",
