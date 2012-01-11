@@ -6,7 +6,7 @@
     "Jasper Palfree (https://github.com/wellcaffeinated)",
     "Jan Mühlemann (https://github.com/jamuhl)"
   ],
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "dive.js",
   "repository": {
     "type": "git",
