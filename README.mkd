@@ -1,5 +1,7 @@
-**dive** is a tiny module for node that is able to recursively walk (_„dive“_) a
-directory tree. **dive** is the asynchronous version of [diveSync](//github.com/pvorb/node-diveSync).
+# dive
+a tiny module for node that is able to recursively walk (_„dive“_) a
+directory tree. **dive** is the asynchronous version of
+[diveSync](//github.com/pvorb/node-diveSync).
 
 ```javascript
 dive(directory[, options], action[, complete]);
@@ -25,6 +27,12 @@ dive(directory[, options], action[, complete]);
 *   `complete [optional]` may define a second callback, that is called, when all
     files have been processed. It takes no arguments.
 
+## Installation
+
+```bash
+npm install dive
+```
+
 ## Usage
 
 ```javascript
@@ -36,12 +44,6 @@ dive(process.cwd(), { all: true }, function(err, file) {
 }, function() {
   console.log('complete');
 });
-```
-
-## Installation
-
-```bash
-$ npm install -g dive
 ```
 
 ## Bugs and Issues
