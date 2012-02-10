@@ -6,6 +6,7 @@ var append = require('append');
 var defaultOpt = {
   all: false,
   recursive: true,
+  files: true,
   directories: false
 };
 
@@ -63,8 +64,9 @@ module.exports = function(dir, opt, action, complete) {
                 if (opt.recursive)
                   dive(fullPath);
               } else {
-                // Call the action
-                action(null, fullPath);
+                // Call action if enabled for files
+                if (opt.files)
+                  action(null, fullPath);
 
                 if (!--todo)
                   complete();
