@@ -3,16 +3,16 @@ a tiny module for node that is able to recursively walk (_„dive“_) a
 directory tree. **dive** is the asynchronous version of
 [diveSync](//github.com/pvorb/node-diveSync).
 
-```javascript
+```js
 dive(directory[, options], action[, complete]);
 ```
 
 *   `directory` is the pathname of a readable directory.
-*   `options [optional]` is an object that defines some of the properties.
+*   `options` [optional] is an object that defines some of the properties.
 
     The default options are as follows:
 
-    ```javascript
+    ```js
     {
       recursive: true,    // - If set to false, this will ignore subdirectories.
       all: false,         // - If set to true, this will show "dot files" and
@@ -20,6 +20,8 @@ dive(directory[, options], action[, complete]);
                           //  ".git/HEAD".
       directories: false  // - If set to true, this will call `action` on
                           //   directories, too.
+      files: true         // - If set to false, this won't call `action` on
+                          //   files any more.
     }
     ```
 *   `action` is passed two arguments `(err, file)` where `err` is an error or
@@ -35,7 +37,18 @@ npm install dive
 
 ## Usage
 
-```javascript
+Default:
+
+```js
+var dive = require('dive');
+
+dive(process.cwd(), function(err, file) {
+
+});
+
+All files and a callback in the end:
+
+```js
 var dive = require('dive');
 
 dive(process.cwd(), { all: true }, function(err, file) {
@@ -43,6 +56,17 @@ dive(process.cwd(), { all: true }, function(err, file) {
   console.log(file);
 }, function() {
   console.log('complete');
+});
+```
+
+Directories only:
+
+```js
+var dive = require('dive');
+
+dive(process.cwd(), { directories: true, files: false }, function(err, dir) {
+  if (err) throw err;
+  console.log(dir);
 });
 ```
 
