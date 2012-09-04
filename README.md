@@ -1,7 +1,7 @@
 # dive
 
-a tiny module for node that is able to recursively walk (_„dive“_) a
-directory tree. **dive** is the asynchronous version of
+a tiny module for node that is able to recursively walk (_“dive”_) a
+directory tree. There’s also an synchronous version of dive called
 [diveSync](//github.com/pvorb/node-diveSync).
 
 ~~~ javascript
