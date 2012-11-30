@@ -75,8 +75,8 @@ module.exports = function(dir, opt, action, complete) {
           });
         }
       });
-      //empty directories
-      if(!list.length && !todo){
+      //empty directories, or with just hidden files
+      if (!todo){
         complete();
       }
     });
