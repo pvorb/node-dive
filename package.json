@@ -4,7 +4,8 @@
   "author": "Paul Vorbach <paul@vorb.de> (http://vorb.de)",
   "contributors": [
     "Jasper Palfree (https://github.com/wellcaffeinated)",
-    "Jan Mühlemann (https://github.com/jamuhl)"
+    "Jan Mühlemann (https://github.com/jamuhl)",
+    "Axel Hecht <axel@pike.org> (http://blog.mozilla.com/axel/)"
   ],
   "version": "0.2.0",
   "main": "dive.js",
