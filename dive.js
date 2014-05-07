@@ -1,6 +1,5 @@
 var fs = require('fs');
 var path = require('path');
-var append = require('append');
 
 // default options
 var defaultOpt = {
@@ -9,6 +8,14 @@ var defaultOpt = {
   files: true,
   directories: false
 };
+
+function defaults(defaults, obj) {
+  for (var prop in defaults)
+    if (defaults.hasOwnProperty(prop))
+      if (!obj.hasOwnProperty(prop))
+        obj[prop] = defaults[prop];
+  return obj;
+}
 
 // general function
 module.exports = function(dir, opt, action, complete) {
@@ -29,7 +36,7 @@ module.exports = function(dir, opt, action, complete) {
   if (typeof dir != 'string')
     dir = process.cwd();
 
-  opt = append(defaultOpt, opt);
+  opt = defaults(defaultOpt, opt);
 
   function dive(dir) {
     // Read the directory
