@@ -8,7 +8,7 @@
     "Axel Hecht <axel@pike.org> (http://blog.mozilla.com/axel/)",
     "Jimb Esser (https://github.com/Jimbly)"
   ],
-  "version": "0.3.0",
+  "version": "0.3.1",
   "main": "dive.js",
   "repository": {
     "type": "git",
