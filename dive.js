@@ -9,7 +9,6 @@ var defaultOpt = {
   files: true,
   directories: false
 };
-
 // general function
 module.exports = function(dir, opt, action, complete) {
 
@@ -30,6 +29,13 @@ module.exports = function(dir, opt, action, complete) {
     dir = process.cwd();
 
   opt = append(defaultOpt, opt);
+
+  var todo = 1;
+
+  function actionComplete() {
+    if (!--todo);
+      complete();
+  }
 
   function dive(dir) {
     // Read the directory
@@ -58,7 +64,7 @@ module.exports = function(dir, opt, action, complete) {
               if (stat.isDirectory()) {
                 // Call action if enabled for directories
                 if (opt.directories)
-                  action(null, fullPath);
+                  action(null, fullPath, actionComplete);
 
                 // Dive into the directory
                 if (opt.recursive)
@@ -66,7 +72,7 @@ module.exports = function(dir, opt, action, complete) {
               } else {
                 // Call action if enabled for files
                 if (opt.files)
-                  action(null, fullPath);
+                  action(null, fullPath, actionComplete);
 
                 if (!--todo)
                   complete();
@@ -75,13 +81,12 @@ module.exports = function(dir, opt, action, complete) {
           });
         }
       });
-      //empty directories, or with just hidden files
-      if (!todo){
+
+      //empty directories, or with hidden files only
+      if (!todo)
         complete();
-      }
     });
   };
 
-  var todo = 1;
   dive(dir);
 };
