@@ -5,7 +5,8 @@
   "contributors": [
     "Jasper Palfree (https://github.com/wellcaffeinated)",
     "Jan Mühlemann (https://github.com/jamuhl)",
-    "Axel Hecht <axel@pike.org> (http://blog.mozilla.com/axel/)"
+    "Axel Hecht <axel@pike.org> (http://blog.mozilla.com/axel/)",
+    "Jimb Esser (https://github.com/Jimbly)"
   ],
   "version": "0.3.0",
   "main": "dive.js",
@@ -25,9 +26,7 @@
   "engines": {
     "node": ">=0.4.0"
   },
-  "dependencies": {
-    "append": ">=0.1.1"
-  },
+  "dependencies": {},
   "devDependencies": {},
   "optionalDependencies": {}
 }
