@@ -6,7 +6,8 @@
     "Jasper Palfree (https://github.com/wellcaffeinated)",
     "Jan Mühlemann (https://github.com/jamuhl)",
     "Axel Hecht <axel@pike.org> (http://blog.mozilla.com/axel/)",
-    "Jimb Esser (https://github.com/Jimbly)"
+    "Jimb Esser (https://github.com/Jimbly)",
+    "Mathias Pettersson (https://github.com/mape)"
   ],
   "version": "0.3.1",
   "main": "dive.js",
