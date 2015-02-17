@@ -9,7 +9,7 @@
     "Jimb Esser (https://github.com/Jimbly)",
     "Zoltan (https://github.com/tssajo)"
   ],
-  "version": "0.3.1",
+  "version": "0.4.0",
   "main": "dive.js",
   "repository": {
     "type": "git",
