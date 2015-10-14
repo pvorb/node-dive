@@ -56,7 +56,7 @@ module.exports = function(dir, opt, action, complete) {
             var fullPath = path.resolve(dir, file);
             // Get the file's stats
             todo++;
-            fs.stat(fullPath, function(err, stat) {
+            fs.lstat(fullPath, function(err, stat) {
               todo--;
               if (err) {
                 action(err, fullPath);
@@ -66,7 +66,7 @@ module.exports = function(dir, opt, action, complete) {
                   if (stat.isDirectory()) {
                     // Call action if enabled for directories
                     if (opt.directories)
-                      action(null, fullPath);
+                      action(null, fullPath, stat);
 
                     // Dive into the directory
                     if (opt.recursive)
@@ -75,7 +75,7 @@ module.exports = function(dir, opt, action, complete) {
                   } else {
                     // Call action if enabled for files
                     if (opt.files)
-                      action(null, fullPath);
+                      action(null, fullPath, stat);
                   }
                 }
               }
