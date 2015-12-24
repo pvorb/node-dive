@@ -6,7 +6,8 @@ var defaultOpt = {
   all: false,
   recursive: true,
   files: true,
-  directories: false
+  directories: false,
+  ignore: false
 };
 
 function defaults(defaults, obj) {
@@ -38,6 +39,15 @@ module.exports = function(dir, opt, action, complete) {
 
   opt = defaults(defaultOpt, opt);
 
+  // Check if user wants to ignore dir/file
+  // If they do, create function that can test if file matches
+  var ignore = null;
+  if (opt.ignore instanceof RegExp) {
+    ignore = function(file) { return file.match(opt.ignore); }
+  } else if (typeof opt.ignore === 'string' && opt.ignore.trim()) {
+    ignore = function(file) { return file.indexOf(opt.ignore) !== -1; }
+  }
+
   function dive(dir) {
     // Read the directory
     todo++;
@@ -49,9 +59,10 @@ module.exports = function(dir, opt, action, complete) {
       } else {
         // For every file in the list
         list.forEach(function(file) {
+          if (ignore && ignore(file))
+            return;
 
           if (opt.all || file[0] !== '.') {
-
             // Full path of that file
             var fullPath = path.resolve(dir, file);
             // Get the file's stats

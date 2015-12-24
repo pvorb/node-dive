@@ -23,6 +23,8 @@ dive(directory[, options], action[, complete]);
                           //   directories, too.
       files: true         // - If set to false, this won't call `action` on
                           //   files any more.
+      ignore: false       // - If set to a string or RegExp, all files and
+                          //   directories that match will be ignored.
     }
     ~~~
 *   `action` is passed three arguments `(err, file, stat)` where `err` is an
