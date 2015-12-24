@@ -11,7 +11,7 @@
     "Manoj Patel <mapatel@microsoft.com> (https://github.com/nojvek)",
     "Mathias Pettersson (https://github.com/mape)"
   ],
-  "version": "0.4.0",
+  "version": "0.5.0",
   "main": "dive.js",
   "repository": {
     "type": "git",
