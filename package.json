@@ -7,7 +7,8 @@
     "Jan Mühlemann (https://github.com/jamuhl)",
     "Axel Hecht <axel@pike.org> (http://blog.mozilla.com/axel/)",
     "Jimb Esser (https://github.com/Jimbly)",
-    "Zoltan (https://github.com/tssajo)"
+    "Zoltan (https://github.com/tssajo)",
+    "Manoj Patel <mapatel@microsoft.com> (https://github.com/nojvek)"
   ],
   "version": "0.4.0",
   "main": "dive.js",
