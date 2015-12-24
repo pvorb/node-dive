@@ -1,7 +1,7 @@
 {
   "name": "dive",
   "description": "walk through directory trees and apply an action to every file",
-  "author": "Paul Vorbach <paul@vorb.de> (http://vorb.de)",
+  "author": "Paul Vorbach <paul@vorba.ch> (http://vorba.ch/)",
   "contributors": [
     "Jasper Palfree (https://github.com/wellcaffeinated)",
     "Jan Mühlemann (https://github.com/jamuhl)",
@@ -27,7 +27,7 @@
     "url": "http://github.com/pvorb/node-dive/issues"
   },
   "engines": {
-    "node": ">=0.4.0"
+    "node": ">= 0.4.0"
   },
   "dependencies": {},
   "devDependencies": {},
