@@ -25,8 +25,9 @@ dive(directory[, options], action[, complete]);
                           //   files any more.
     }
     ~~~
-*   `action` is passed two arguments `(err, file)` where `err` is an error or
-    `null` and `file` is the pathname of a file.
+*   `action` is passed three arguments `(err, file, stat)` where `err` is an
+    error or `null`, `file` is the pathname of a file and `stat` is an
+    [fs.Stats](https://nodejs.org/api/fs.html#fs_class_fs_stats) object.
 *   `complete [optional]` may define a second callback, that is called, when all
     files have been processed. It takes no arguments.
 
@@ -51,7 +52,7 @@ All files and a callback in the end:
 ~~~ javascript
 var dive = require('dive');
 
-dive(process.cwd(), { all: true }, function(err, file) {
+dive(process.cwd(), { all: true }, function(err, file, stat) {
   if (err) throw err;
   console.log(file);
 }, function() {
@@ -74,7 +75,7 @@ dive(process.cwd(), { directories: true, files: false }, function(err, dir) {
 
 If you encounter any bugs or issues, feel free to
 [open an issue at github](//github.com/pvorb/node-dive/issues) or send me an
-email to <paul@vorb.de>. I also always like to hear from you, if you’re using my
+email to <paul@vorba.ch>. I also always like to hear from you, if you’re using my
 code.
 
 ## License
